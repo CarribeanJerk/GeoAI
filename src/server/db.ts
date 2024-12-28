@@ -1,22 +1,15 @@
-import { Client } from "@planetscale/database";
-import { PrismaPlanetScale } from "@prisma/adapter-planetscale";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client"
+import { env } from "~/env"
 
-import { env } from "~/env";
-
-const psClient = new Client({ url: env.DATABASE_URL });
-
-const createPrismaClient = () =>
-  new PrismaClient({
-    log:
-      env.NODE_ENV === "development" ? ["query", "error", "warn"] : ["error"],
-    adapter: new PrismaPlanetScale(psClient),
-  });
+export const db = new PrismaClient({
+  log:
+    env.NODE_ENV === "development" ? ["query", "error", "warn"] : ["error"],
+})
 
 const globalForPrisma = globalThis as unknown as {
-  prisma: ReturnType<typeof createPrismaClient> | undefined;
+  prisma: PrismaClient | undefined;
 };
 
-export const db = globalForPrisma.prisma ?? createPrismaClient();
+export const prisma = globalForPrisma.prisma ?? db;
 
-if (env.NODE_ENV !== "production") globalForPrisma.prisma = db;
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
