@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background: #000913;
+    }
+    
+.earth {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #2B5D34 0deg 60deg,
+        #1E4D2B 60deg 120deg,
+        #2B5D34 120deg 180deg,
+        #1B4B29 180deg 240deg,
+        #2B5D34 240deg 300deg,
+        #1E4D2B 300deg 360deg
+      );
+      position: relative;
+      box-shadow: inset -20px -20px 50px rgba(0,0,0,0.5),
+                  -2px -2px 15px rgba(255,255,255,0.1);
+      animation: rotate 20s linear infinite;
+    }
+
+    .earth::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%,
+        rgba(255,255,255,0.1),
+        rgba(0,0,0,0.4)
+      );
+    }
+
+    .ocean {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background: linear-gradient(45deg,
+        rgba(65,105,225,0.5),
+        rgba(0,0,139,0.5)
+      );
+      animation: shine 4s linear infinite;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes shine {
+      0%, 100% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    .homepage-bg {
+      background: linear-gradient(to bottom, #0d0716, #6468ab);
+      min-height: 100vh;
+    }

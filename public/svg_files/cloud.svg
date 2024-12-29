@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 45">
+  <path fill="white" d="
+    M 20 28
+    a 8 8 0 0 1 0 -17
+    a 20 11 0 0 1 35 -8
+    a 30 17 0 0 1 55 0
+    a 25 14 0 0 1 40 8
+    a 8 8 0 0 1 0 17
+    a 25 14 0 0 1 -40 6
+    a 30 17 0 0 1 -45 0
+    a 20 11 0 0 1 -45 -6
+    z"
+  />
+</svg>
