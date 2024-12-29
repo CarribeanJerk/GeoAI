@@ -1,17 +1,49 @@
 "use client"
 import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs'
 import React, { useState } from 'react'
+import cities from '../cities.json'
+import { api } from "~/trpc/react";
 
 export default function Home() {
   const user = useUser();
   const [isMinimized, setIsMinimized] = useState(false);
+  const [riddle, setRiddle] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const generateRiddle = api.generate.generateRiddle.useMutation({
+    onSuccess: (data) => {
+      if (data.success && data.result) {
+        setRiddle(data.result);
+      }
+      setIsLoading(false);
+    },
+    onError: (error) => {
+      console.error('Error:', error);
+      setIsLoading(false);
+    },
+  });
+
+  const handlePlanetClick = async () => {
+    setIsMinimized(!isMinimized);
+    setIsLoading(true);
+    
+    const randomCity = cities[Math.floor(Math.random() * cities.length)];
+    if (randomCity) {
+        generateRiddle.mutate({ city: randomCity });
+    }
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0d0716] to-[#6468ab] flex items-center justify-center">
+      <div className="absolute top-4 right-4">
+        {!user.isSignedIn && <SignInButton />}
+        {!!user.isSignedIn && <SignOutButton />}
+      </div>
+
       <div 
         className={`flex justify-center items-center min-h-[400px] transition-all duration-1000 ease-in-out
           ${isMinimized ? 'scale-50 translate-x-full' : ''}`}
-        onClick={() => setIsMinimized(!isMinimized)}
+        onClick={handlePlanetClick}
       >
         <div className="opacity-100">
           <div className="relative w-[300px] h-[300px] rounded-full animate-[spin_25s_linear_infinite] shadow-[inset_-30px_-30px_80px_rgba(0,0,0,0.5),-2px_-2px_15px_rgba(255,255,255,0.1)]"
@@ -29,28 +61,18 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="absolute top-4 right-4">
-        {!user.isSignedIn && (
-          <SignInButton mode="modal">
-            <button className="px-4 py-2 rounded-full bg-sky-500 text-white font-medium 
-              shadow-lg hover:bg-sky-600 active:bg-sky-700 
-              transition-all duration-300 ease-in-out
-              hover:shadow-sky-400/50 hover:-translate-y-0.5">
-              Sign In
-            </button>
-          </SignInButton>
-        )}
-        {!!user.isSignedIn && (
-          <SignOutButton>
-            <button className="px-4 py-2 rounded-full bg-sky-500 text-white font-medium 
-              shadow-lg hover:bg-sky-600 active:bg-sky-700 
-              transition-all duration-300 ease-in-out
-              hover:shadow-sky-400/50 hover:-translate-y-0.5">
-              Sign Out
-            </button>
-          </SignOutButton>
-        )}
-      </div>
+
+      {/* Riddle display */}
+      {isLoading && (
+        <div className="fixed bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg">
+          Generating riddle...
+        </div>
+      )}
+      {riddle && !isLoading && (
+        <div className="fixed bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-md">
+          <p className="text-white/90 whitespace-pre-line">{riddle}</p>
+        </div>
+      )}
     </main>
   );
 }
