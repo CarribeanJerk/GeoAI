@@ -75,3 +75,48 @@
       background: linear-gradient(to bottom, #0d0716, #6468ab);
       min-height: 100vh;
     }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from { 
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from { 
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-slideIn {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+
+    .animate-slideUp {
+      animation: slideUp 0.5s ease-out forwards;
+    }

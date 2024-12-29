@@ -3,22 +3,31 @@ import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs'
 import React, { useState } from 'react'
 import cities from '../cities.json'
 import { api } from "~/trpc/react";
+import { Space_Grotesk } from "next/font/google";
+
+interface GuessState {
+  isReady: boolean;
+  message: string;
+}
+
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 export default function Home() {
   const user = useUser();
   const [isMinimized, setIsMinimized] = useState(false);
   const [riddle, setRiddle] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [guessState, setGuessState] = useState<GuessState>({ isReady: false, message: "" });
 
   const generateRiddle = api.generate.generateRiddle.useMutation({
     onSuccess: (data) => {
       if (data.success && data.result) {
         setRiddle(data.result);
+        setGuessState({ isReady: true, message: "Click anywhere on the Earth to make your guess!" });
       }
-      setIsLoading(false);
-    },
-    onError: (error) => {
-      console.error('Error:', error);
       setIsLoading(false);
     },
   });
@@ -37,8 +46,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0d0716] to-[#6468ab] flex items-center justify-center">
-      <div className="absolute top-4 right-4">
+    <main className="min-h-screen bg-gradient-to-b from-[#0d0716] to-[#6468ab] flex items-center justify-center">      <div className="absolute top-4 right-4">
         {!user.isSignedIn && <SignInButton />}
         {!!user.isSignedIn && <SignOutButton />}
       </div>
@@ -67,15 +75,32 @@ export default function Home() {
 
       {/* Riddle display */}
       {isLoading && (
-        <div className="fixed bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg">
-          Generating riddle...
+        <div className="fixed top-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg 
+          animate-fadeIn transition-all duration-300 ease-in-out">
+          <div className="animate-pulse">
+            Generating riddle...
+          </div>
         </div>
       )}
       {riddle && !isLoading && (
-        <div className="fixed bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-md">
-          <p className="text-white/90 whitespace-pre-line">{riddle}</p>
+        <div className="fixed top-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-md 
+          animate-slideIn transition-all duration-500 ease-in-out">
+          {riddle.split('\n').map((line, index) => (
+            <p key={index} 
+               className={`${spaceGrotesk.className} text-white/90 whitespace-pre-line animate-slideIn tracking-wider`}
+               style={{ animationDelay: `${index * 200}ms` }}>
+              {line}
+            </p>
+          ))}
         </div>
       )}
+      {/* New guessing interface */}
+      {guessState.isReady && (
+        <div className="fixed bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg 
+          animate-slideUp transition-all duration-500 ease-in-out">
+          <p className="text-white/90 mb-2">{guessState.message}</p>
+        </div>
+      )}  
     </main>
   );
 }

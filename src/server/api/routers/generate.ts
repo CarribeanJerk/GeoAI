@@ -29,7 +29,7 @@ export const generateRouter = createTRPCRouter({
               },
               {
                 role: "user",
-                content: `Create a riddle about ${input.city}. The riddle should be challenging but solvable, including geographical, cultural, or historical hints. Don't mention the city name directly.`
+                content: `Create a riddle about ${input.city}. The riddle should be challenging but solvable, including geographical, cultural, or historical hints. Don't mention the city name directly, and don't specify "hint", just drop them around in the riddle. also make it at most 8 lines.`
               }
             ],
             temperature: 0.7
