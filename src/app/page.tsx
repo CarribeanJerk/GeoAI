@@ -8,6 +8,7 @@ import { Space_Grotesk } from "next/font/google";
 interface GuessState {
   isReady: boolean;
   message: string;
+
 }
 
 const spaceGrotesk = Space_Grotesk({ 
@@ -24,7 +25,8 @@ export default function Home() {
   const [isShaking, setIsShaking] = useState(false);
   const [isMessageBouncing, setIsMessageBouncing] = useState(false);
   const [initialRender, setInitialRender] = useState(true);
-  const [showWelcome] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(true);
+  const [hasActiveRiddle, setHasActiveRiddle] = useState(false);
 
   const generateRiddle = api.generate.generateRiddle.useMutation({
     onSuccess: (data) => {
@@ -42,7 +44,7 @@ export default function Home() {
         setGuessState({ 
           isReady: true, 
           message: "Please sign in to play!" 
-        });
+        })
       } else {
         setIsMessageBouncing(true);
         setTimeout(() => setIsMessageBouncing(false), 1000);
@@ -52,19 +54,20 @@ export default function Home() {
       return;
     }
 
-    setIsMinimized(!isMinimized);
+    setShowWelcome(false);
     
-    // Only generate riddle when minimizing and user is signed in
-    if (!isMinimized) {
+    // Only allow new riddle if there isn't an active one
+    if (!isMinimized && !hasActiveRiddle) {
+      setIsMinimized(true);
       setIsLoading(true);
       const randomCity = cities[Math.floor(Math.random() * cities.length)];
       if (randomCity) {
-        try {
-          generateRiddle.mutate({ city: randomCity });
-        } catch (error) {
-          console.error('Error:', error instanceof Error ? error.message : String(error));
-        }
+        setHasActiveRiddle(true);
+        generateRiddle.mutate({ city: randomCity });
       }
+    } else if (isMinimized && hasActiveRiddle) {
+      // Allow toggling back to center when there's an active riddle
+      setIsMinimized(false);
     }
   };
 
@@ -77,7 +80,7 @@ export default function Home() {
 
   return (
     <main className="min-h-[100vh] w-[100vw] overflow-hidden bg-gradient-to-b from-[#0d0716] to-[#6468ab] flex items-center justify-center fixed inset-0">
-      <div className="absolute top-4 right-4 z-30 cursor-pointer">
+      <div className="absolute top-4 right-4 z-50 cursor-pointer">
         <div className="text-white hover:text-white/80 transition-colors">
           {!user.isSignedIn && <SignInButton />}
           {!!user.isSignedIn && (
@@ -119,9 +122,9 @@ export default function Home() {
         )}
 
         <div 
-          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0
             flex justify-center items-center transition-all duration-1000 ease-in-out
-            ${isMinimized ? 'md:translate-x-[25%] scale-50 md:scale-100' : ''}
+            ${isMinimized ? 'md:translate-x-[1%] scale-50 md:scale-100' : ''}
             ${isShaking ? 'animate-shake' : ''}`}
           onClick={handlePlanetClick}
         >

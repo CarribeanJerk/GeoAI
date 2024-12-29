@@ -86,12 +86,12 @@ export default {
             opacity: '1'
           },
           '20%': {
-            borderRight: '4px solid white',
-          },
-          '22%': {
             borderRight: '0px solid transparent',
           },
-          '99%': { 
+          '99%': {
+            opacity: '1'
+          },
+          '100%': { 
             width: '100%',
             opacity: '1'
           }
