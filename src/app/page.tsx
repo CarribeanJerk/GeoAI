@@ -75,19 +75,19 @@ export default function Home() {
 
       {/* Riddle display */}
       {isLoading && (
-        <div className="fixed top-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg 
-          animate-fadeIn transition-all duration-300 ease-in-out">
-          <div className="animate-pulse">
+        <div className="fixed top-4 left-4 md:top-8 md:left-8 bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-lg shadow-lg 
+          w-[90vw] md:w-auto md:max-w-md animate-fadeIn transition-all duration-300 ease-in-out">
+          <div className="animate-pulse text-sm md:text-base">
             Generating riddle...
           </div>
         </div>
       )}
       {riddle && !isLoading && (
-        <div className="fixed top-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-md 
-          animate-slideIn transition-all duration-500 ease-in-out">
+        <div className="fixed top-4 left-4 md:top-8 md:left-8 bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-lg shadow-lg 
+          w-[90vw] md:w-auto md:max-w-md animate-slideIn transition-all duration-500 ease-in-out">
           {riddle.split('\n').map((line, index) => (
             <p key={index} 
-               className={`${spaceGrotesk.className} text-white/90 whitespace-pre-line animate-slideIn tracking-wider`}
+               className={`${spaceGrotesk.className} text-white/90 whitespace-pre-line animate-slideIn text-sm md:text-base tracking-wider`}
                style={{ animationDelay: `${index * 200}ms` }}>
               {line}
             </p>
@@ -96,9 +96,9 @@ export default function Home() {
       )}
       {/* New guessing interface */}
       {guessState.isReady && (
-        <div className="fixed bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg 
-          animate-slideUp transition-all duration-500 ease-in-out">
-          <p className="text-white/90 mb-2">{guessState.message}</p>
+        <div className="fixed bottom-4 left-4 md:bottom-8 md:left-8 bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-lg shadow-lg 
+          w-[90vw] md:w-auto md:max-w-md animate-slideUp transition-all duration-500 ease-in-out">
+          <p className="text-white/90 mb-2 text-sm md:text-base">{guessState.message}</p>
         </div>
       )}  
     </main>
