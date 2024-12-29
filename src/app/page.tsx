@@ -76,10 +76,16 @@ export default function Home() {
 
   return (
     <main className="min-h-[100vh] w-[100vw] overflow-hidden bg-gradient-to-b from-[#0d0716] to-[#6468ab] flex items-center justify-center fixed inset-0">
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-4 right-4 z-20 cursor-pointer">
         <div className="text-white hover:text-white/80 transition-colors">
           {!user.isSignedIn && <SignInButton />}
-          {!!user.isSignedIn && <SignOutButton />}
+          {!!user.isSignedIn && (
+            <div onClick={() => {
+              setTimeout(() => window.location.reload(), 300);
+            }}>
+              <SignOutButton />
+            </div>
+          )}
         </div>
       </div>
 
