@@ -85,11 +85,13 @@ export default {
           '1%': {
             opacity: '1'
           },
-          '99%': {
+          '20%': {
             borderRight: '4px solid white',
-            opacity: '1'
           },
-          '100%': { 
+          '22%': {
+            borderRight: '0px solid transparent',
+          },
+          '99%': { 
             width: '100%',
             opacity: '1'
           }
