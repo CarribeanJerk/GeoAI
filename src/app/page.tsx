@@ -25,11 +25,14 @@ export default function Home() {
 
   const handlePlanetClick = async () => {
     setIsMinimized(!isMinimized);
-    setIsLoading(true);
     
-    const randomCity = cities[Math.floor(Math.random() * cities.length)];
-    if (randomCity) {
+    // Only generate riddle when minimizing
+    if (!isMinimized) {
+      setIsLoading(true);
+      const randomCity = cities[Math.floor(Math.random() * cities.length)];
+      if (randomCity) {
         generateRiddle.mutate({ city: randomCity });
+      }
     }
   };
 
