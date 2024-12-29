@@ -14,7 +14,8 @@ export default {
         slideUp: 'slideUp 0.5s ease-out forwards',
         shake: 'shake 0.3s ease-in-out',
         messageBounce: 'bounce 1s cubic-bezier(0.36, 0, 0.66, -0.56)',
-        slideInLeft: 'slideInLeft 0.5s ease-out forwards'
+        slideInLeft: 'slideInLeft 0.5s ease-out forwards',
+        typing: 'typing 4s steps(40, end) forwards',
       },
       keyframes: {
         fadeIn: {
@@ -73,6 +74,24 @@ export default {
           },
           '100%': { 
             transform: 'translateX(0)' 
+          }
+        },
+        typing: {
+          '0%': { 
+            width: '0',
+            borderRight: '4px solid white',
+            opacity: '0'
+          },
+          '1%': {
+            opacity: '1'
+          },
+          '99%': {
+            borderRight: '4px solid white',
+            opacity: '1'
+          },
+          '100%': { 
+            width: '100%',
+            opacity: '1'
           }
         }
       },
