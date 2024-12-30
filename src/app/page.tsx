@@ -2,7 +2,6 @@
 import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs'
 import React, { useState, useEffect } from 'react'
 import cities from '../cities.json'
-import { api } from "~/trpc/react";
 import { Space_Grotesk } from "next/font/google";
 import { calculateScore } from "~/utils/distance";
 import GuessMap from "~/components/GuessMap";
@@ -35,16 +34,6 @@ export default function Home() {
   const [score, setScore] = useState<number | null>(null);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
 
-  const generateRiddle = api.generate.generateRiddle.useMutation({
-    onSuccess: (data) => {
-      if (data.success && data.result) {
-        setRiddle(data.result);
-        setCityCoords(data.coordinates);
-      }
-      setIsLoading(false);
-    },
-  });
-
   const handlePlanetClick = async () => {
     if (!user.isSignedIn) {
       if (!guessState.isReady) {
@@ -71,10 +60,9 @@ export default function Home() {
       const randomCity = cities[Math.floor(Math.random() * cities.length)];
       if (randomCity) {
         setHasActiveRiddle(true);
-        generateRiddle.mutate({
-          city: randomCity.city,
-          coordinates: [randomCity.coordinates.lon, randomCity.coordinates.lat] as [number, number]
-        });
+        setRiddle(randomCity.riddle);
+        setCityCoords([randomCity.coordinates.lon, randomCity.coordinates.lat]);
+        setIsLoading(false);
       }
     }
   };

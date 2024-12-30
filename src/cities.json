@@ -6,7 +6,7 @@
       "lat": 40.7128,
       "lon": -74.006
     },
-    "riddle": null
+    "riddle": "Where Lady Liberty stands tall and proud,\nIn harbor waters, a beacon to the crowd.\nFive boroughs unite in endless dance,\nSkyscrapers pierce clouds in finance's romance.\nCentral Park's heart beats green and strong,\nYellow cabs weave their urban song.\nThe city that never sleeps, they say,\nEmpire State dreams light the way."
   },
   {
     "city": "London",
@@ -15,16 +15,16 @@
       "lat": 51.5074,
       "lon": -0.1278
     },
-    "riddle": null
+    "riddle": "Big Ben chimes through misty air,\nThames flows past with regal flair.\nRoyal guards in crimson stand,\nTower Bridge spans ancient land.\nPiccadilly's lights aglow,\nIn Camden Market, stories flow.\nWhere crown jewels catch the light,\nCity's heart beats day and night."
   },
   {
     "city": "Tokyo",
     "country": "Japan",
     "coordinates": {
-      "lat": 35.6895,
-      "lon": 139.6917
+      "lat": 35.6762,
+      "lon": 139.6503
     },
-    "riddle": null
+    "riddle": "Neon dreams in cherry blossom nights,\nShinkansen speeds past temple lights.\nShibuya's crossing, souls cascade,\nIn zen gardens, traditions fade.\nMount Fuji watches from afar,\nAs manga tales meet rising star.\nWhere old and new in harmony blend,\nImperial grounds where dragons tend."
   },
   {
     "city": "Paris",
@@ -33,16 +33,16 @@
       "lat": 48.8566,
       "lon": 2.3522
     },
-    "riddle": null
+    "riddle": "Iron lady reaches to the sky,\nSeine's waters slowly passing by.\nCafé aromas fill the air,\nNotre-Dame stands in silent prayer.\nLouvre's glass pyramid gleams at dawn,\nMontmartre artists' dreams spawn.\nCity of Light, romance's home,\nBeneath stars, lovers freely roam."
   },
   {
-    "city": "Los Angeles",
-    "country": "USA",
+    "city": "Sydney",
+    "country": "Australia",
     "coordinates": {
-      "lat": 34.0522,
-      "lon": -118.2437
+      "lat": -33.8688,
+      "lon": 151.2093
     },
-    "riddle": null
+    "riddle": "Opera House sails catch the breeze,\nHarbour Bridge spans southern seas.\nBondi's waves crash and spray,\nAs cockatoos greet breaking day.\nCircular Quay's ferries glide,\nManly Beach's rolling tide.\nWhere Pacific meets the shore,\nSouthern Cross watches o'er."
   },
   {
     "city": "Mumbai",
@@ -51,7 +51,7 @@
       "lat": 19.076,
       "lon": 72.8777
     },
-    "riddle": null
+    "riddle": "Gateway arches to Arabian seas,\nDharavi's spirit never flees.\nDabbawalas race through monsoon rain,\nChowpatty's crowds grow once again.\nColaba's lanes hold stories old,\nMarine Drive's queens necklace gold.\nWhere Bollywood dreams take their flight,\nMaximum City burns bright."
   },
   {
     "city": "Rio de Janeiro",
@@ -60,7 +60,7 @@
       "lat": -22.9068,
       "lon": -43.1729
     },
-    "riddle": null
+    "riddle": "Christ the Redeemer's arms spread wide,\nCopacabana's rolling tide.\nSugar Loaf at sunset glows,\nSamba rhythms as night grows.\nCarnival colors fill the street,\nIpanema's golden heat.\nWhere mountains meet the sea so blue,\nFavelas climb for ocean's view."
   },
   {
     "city": "Cairo",
@@ -69,7 +69,7 @@
       "lat": 30.0444,
       "lon": 31.2357
     },
-    "riddle": null
+    "riddle": "Pyramids pierce desert skies,\nSphinx's riddles ancient wise.\nNile flows as it always has,\nKhan el-Khalili's bustling jazz.\nMinarets call through the day,\nCoptic churches where some pray.\nWhere pharaohs once did rule this land,\nModern life meets desert sand."
   },
   {
     "city": "Moscow",
@@ -78,7 +78,7 @@
       "lat": 55.7558,
       "lon": 37.6173
     },
-    "riddle": "In a land of frost and fire, I stand tall,\nMy heart beats with the rhythm of a thousand bells.\nRivers of red weave through my sprawling halls,\nWhere once a mighty wall told tales of citadels.\nDance of the flames marks my longest night,\nAnd my name echoes in a famous play's fight.\nSeek me where the bear and the eagle take flight,\nIn the embrace of the cold, I am the light."
+    "riddle": "Saint Basil's domes touch the stars,\nKremlin walls hold history's scars.\nRed Square echoes marching feet,\nMetro stations, art complete.\nMoscow River winds its way,\nArbat artists greet the day.\nWhere golden rings of churches shine,\nImperial dreams through space and time."
   },
   {
     "city": "Berlin",
@@ -87,7 +87,7 @@
       "lat": 52.52,
       "lon": 13.405
     },
-    "riddle": null
+    "riddle": "Where walls once split east from west,\nA city healed, put time to test.\nBrandenburger Tor stands proud,\nKurfürstendamm draws the crowd.\nMuseumsinsel's treasures old,\nPotsdamer Platz, modern and bold.\nFrom Reichstag's dome to Spree's flow,\nUnity's spirit continues to grow."
   },
   {
     "city": "Mexico City",
@@ -96,7 +96,7 @@
       "lat": 19.4326,
       "lon": -99.1332
     },
-    "riddle": null
+    "riddle": "Aztec temples beneath modern streets,\nWhere past and present gently meet.\nZócalo's heart beats proud and strong,\nXochimilco's boats drift along.\nChapultepec's castle stands high,\nReforma's angel guards the sky.\nWhere ancient gods still hold their sway,\nIn valley depths where eagles lay."
   },
   {
     "city": "Cape Town",
@@ -105,7 +105,7 @@
       "lat": -33.9249,
       "lon": 18.4241
     },
-    "riddle": null
+    "riddle": "Table Mountain wears its cloud,\nRobben Island's stories loud.\nCape of Good Hope's winds do blow,\nBo-Kaap's colors brightly glow.\nWaterfront where seals do play,\nWinelands stretching far away.\nWhere two oceans meet and merge,\nPenguin colonies surge and surge."
   },
   {
     "city": "Singapore",
@@ -114,7 +114,7 @@
       "lat": 1.3521,
       "lon": 103.8198
     },
-    "riddle": null
+    "riddle": "Where Merlion guards the bay,\nGardens by the Bay display\nSupertrees that touch the night,\nMarina Sands' stunning height.\nHawker centers' fragrant air,\nOrchard Road's endless flair.\nLittle India's spice bazaar,\nWhere future's dreams aren't too far."
   },
   {
     "city": "Toronto",
@@ -123,7 +123,7 @@
       "lat": 43.6532,
       "lon": -79.3832
     },
-    "riddle": null
+    "riddle": "CN Tower pierces cloud and sky,\nOntario's waters flowing by.\nKensington's markets bustle bright,\nMaple Leafs play into night.\nHarbourfront where boats do sway,\nStreetcars rolling on their way.\nWhere cultures blend in harmony,\nBeneath the tower's majesty."
   },
   {
     "city": "Istanbul",
@@ -132,7 +132,7 @@
       "lat": 41.0082,
       "lon": 28.9784
     },
-    "riddle": null
+    "riddle": "Where East meets West across the strait,\nHagia Sophia stands in state.\nGrand Bazaar's lanes twist and wind,\nBosphorus bridges two worlds combined.\nBlue Mosque's minarets reach high,\nSpice markets' scents fill the sky.\nWhere sultans' dreams still remain,\nAcross two continents' domain."
   },
   {
     "city": "Bangkok",
@@ -141,7 +141,7 @@
       "lat": 13.7563,
       "lon": 100.5018
     },
-    "riddle": null
+    "riddle": "Chao Phraya splits the city's soul,\nWhere temple spires take their toll.\nGrand Palace gleams in golden light,\nKhao San wakes in neon night.\nTuk-tuks weave through market throngs,\nWat Arun where prayer belongs.\nWhere floating markets greet the day,\nAngel City makes its way."
   },
   {
     "city": "Amsterdam",
@@ -150,7 +150,7 @@
       "lat": 52.3676,
       "lon": 4.9041
     },
-    "riddle": null
+    "riddle": "Canals reflect the golden age,\nBicycle bells write history's page.\nTall houses lean in gentle sway,\nVan Gogh's dreams in colors play.\nDam Square's pigeons take their flight,\nRed lights glow in autumn night.\nWhere tulips once were worth their weight,\nWindmills turn to meet their fate."
   },
   {
     "city": "Buenos Aires",
@@ -159,7 +159,7 @@
       "lat": -34.6037,
       "lon": -58.3816
     },
-    "riddle": null
+    "riddle": "Tango dancers sweep the night,\nJacaranda trees bloom bright.\nLa Boca's colors paint the way,\nIn San Telmo, artists play.\nObelisk stands proud and tall,\nPuerto Madero's modern call.\nWhere gauchos' spirits still remain,\nEuropean dreams on southern plain."
   },
   {
     "city": "Seoul",
@@ -168,7 +168,7 @@
       "lat": 37.5665,
       "lon": 126.978
     },
-    "riddle": null
+    "riddle": "Namsan Tower lights the way,\nHangang River's gentle sway.\nGangnam's streets pulse with life,\nBukchon hanoks dodge time's strife.\nTemple bells at Jogyesa ring,\nDongdaemun markets' nightly swing.\nWhere ancient palaces still stand,\nK-pop echoes through the land."
   },
   {
     "city": "Vienna",
@@ -177,7 +177,7 @@
       "lat": 48.2082,
       "lon": 16.3738
     },
-    "riddle": null
+    "riddle": "Waltz music fills the air,\nSchönbrunn Palace, regal flair.\nSt. Stephen's spire points on high,\nSacher tortes make hearts sigh.\nPrater wheel turns day to night,\nSpanish horses dance in white.\nWhere Mozart's notes once flew,\nDanube whispers stories true."
   },
   {
     "city": "Dubai",
@@ -186,7 +186,7 @@
       "lat": 25.2048,
       "lon": 55.2708
     },
-    "riddle": null
+    "riddle": "Burj Khalifa scrapes the clouds,\nDesert sands meet shopping crowds.\nPalm islands rise from azure seas,\nGold souks glitter in the breeze.\nFountains dance by Dubai Mall,\nBedouin tales echo through it all.\nWhere future dreams touch ancient sands,\nMiracles rise in desert lands."
   },
   {
     "city": "Stockholm",
@@ -195,7 +195,7 @@
       "lat": 59.3293,
       "lon": 18.0686
     },
-    "riddle": null
+    "riddle": "In a land where waters weave a tale of two,\nA city stands, its heart split in view.\nNobel's prize and ancient viking lore,\nBridges connect what once was more.\nWhere northern lights might grace the sky,\nAnd meatballs with lingonberries lie,\nA palace royal and museums grand,\nName this city of the northern land."
   },
   {
     "city": "Athens",
@@ -204,7 +204,7 @@
       "lat": 37.9838,
       "lon": 23.7275
     },
-    "riddle": null
+    "riddle": "Parthenon crowns ancient hill,\nWhere wisdom's light shines brighter still.\nPlaka's streets wind down below,\nWhere olive trees and legends grow.\nAcropolis guards stories old,\nSyntagma's changes now unfold.\nWhere democracy first found its way,\nAncient gods still rule today."
   },
   {
     "city": "Prague",
@@ -213,7 +213,7 @@
       "lat": 50.0755,
       "lon": 14.4378
     },
-    "riddle": null
+    "riddle": "Charles Bridge spans the Vltava's flow,\nAstronomical Clock puts on its show.\nCastle hill watches from above,\nOld Town Square shares tales of love.\nJewish Quarter holds memories dear,\nArt Nouveau gems sparkle near.\nWhere hundred spires touch the sky,\nBohemian dreams never die."
   },
   {
     "city": "Vancouver",
@@ -222,16 +222,7 @@
       "lat": 49.2827,
       "lon": -123.1207
     },
-    "riddle": null
-  },
-  {
-    "city": "Lisbon",
-    "country": "Portugal",
-    "coordinates": {
-      "lat": 38.7223,
-      "lon": -9.1393
-    },
-    "riddle": null
+    "riddle": "Mountains guard this coastal gem,\nStanley Park, a green diadem.\nGastown's steam clock marks the hours,\nGranville Island's market flowers.\nSeawall paths wind round the shore,\nWhile seaplanes soar forevermore.\nWhere nature meets the urban scene,\nPacific winds keep forests green."
   },
   {
     "city": "Copenhagen",
@@ -240,7 +231,7 @@
       "lat": 55.6761,
       "lon": 12.5683
     },
-    "riddle": null
+    "riddle": "Little Mermaid dreams by the shore,\nNyhavn's colors tell tales of yore.\nTivoli's lights dance in the night,\nBicycle bells ring pure delight.\nRosenborg Castle guards its crown,\nStrøget shoppers walk up and down.\nWhere hygge warms the winter's chill,\nHans Christian's stories linger still."
   },
   {
     "city": "Dublin",
@@ -249,7 +240,7 @@
       "lat": 53.3498,
       "lon": -6.2603
     },
-    "riddle": null
+    "riddle": "Where Liffey's waters gently flow,\nTrinity's scholars come and go.\nTemple Bar's music fills the night,\nGuinness storehouse towers in height.\nPhoenix Park's deer roam free and wild,\nGeorgian squares with history styled.\nWhere Joyce once walked these cobbled ways,\nAnd Celtic tales fill rainy days."
   },
   {
     "city": "Helsinki",
@@ -258,7 +249,7 @@
       "lat": 60.1699,
       "lon": 24.9384
     },
-    "riddle": null
+    "riddle": "Baltic waves meet granite shore,\nSenate Square holds history's store.\nSuomenlinna guards the seas,\nEsplanade's green mysteries.\nTemppeliaukio carved in stone,\nMarket Square where gulls have flown.\nWhere northern lights might dance above,\nDesign and nature share their love."
   },
   {
     "city": "Oslo",
@@ -267,7 +258,7 @@
       "lat": 59.9139,
       "lon": 10.7522
     },
-    "riddle": null
+    "riddle": "Fjord waters mirror mountain sky,\nViking ships still catch the eye.\nVigeland's statues frozen dance,\nHolmenkollen's ski-jump chance.\nOpera house like ice berg gleams,\nAker Brygge sunset dreams.\nWhere forests meet the urban scene,\nNorse legends keep their secrets green."
   },
   {
     "city": "Warsaw",
@@ -276,312 +267,69 @@
       "lat": 52.2297,
       "lon": 21.0122
     },
-    "riddle": null
+    "riddle": "Phoenix city rose from flame,\nVistula flows, never the same.\nOld Town Market's colors bright,\nPalace of Culture's soaring height.\nŁazienki's peacocks proud,\nCopernicus gazes at the crowd.\nWhere history's scars run deep and true,\nPolish spirit breaks through new."
   },
   {
-    "city": "Brussels",
-    "country": "Belgium",
+    "city": "San Francisco",
+    "country": "USA",
     "coordinates": {
-      "lat": 50.8503,
-      "lon": 4.3517
+      "lat": 37.7749,
+      "lon": -122.4194
     },
-    "riddle": null
+    "riddle": "Golden Gate spans misty bay,\nCable cars climb hills all day.\nFisherman's Wharf seals bark loud,\nChinatown draws a bustling crowd.\nPainted ladies pose with grace,\nAlcatraz guards empty space.\nWhere fog rolls in from western seas,\nFlower children's memories."
   },
   {
-    "city": "Madrid",
+    "city": "Montreal",
+    "country": "Canada",
+    "coordinates": {
+      "lat": 45.5017,
+      "lon": -73.5673
+    },
+    "riddle": "Mount Royal watches from above,\nNotre-Dame's lights speak of love.\nOld Port waters gently flow,\nPlateau's stairs through winter snow.\nJean-Talon's markets overflow,\nOratoire's bells soft and low.\nWhere French and English stories meet,\nMaple seasons make complete."
+  },
+  {
+    "city": "Barcelona",
     "country": "Spain",
     "coordinates": {
-      "lat": 40.4168,
-      "lon": -3.7038
+      "lat": 41.3851,
+      "lon": 2.1734
     },
-    "riddle": null
+    "riddle": "Sagrada reaches to the stars,\nRamblas pulse through evening hours.\nGaudí's dreams in stone unfold,\nBarri Gòtic secrets hold.\nMontjuïc overlooks the scene,\nBarceloneta's beach serene.\nWhere Catalan pride runs deep,\nMediterranean treasures keep."
   },
   {
-    "city": "Rome",
+    "city": "Milan",
     "country": "Italy",
     "coordinates": {
-      "lat": 41.9028,
-      "lon": 12.4964
+      "lat": 45.4642,
+      "lon": 9.19
     },
-    "riddle": null
+    "riddle": "Duomo's spires pierce the sky,\nGalleria's glass roofs catch the eye.\nLast Supper hides behind church walls,\nScala's opera evening calls.\nNavigli's waters flow with grace,\nSforza's castle guards its space.\nWhere fashion meets industrial might,\nLombard dreams take northern flight."
   },
   {
-    "city": "Zurich",
-    "country": "Switzerland",
-    "coordinates": {
-      "lat": 47.3769,
-      "lon": 8.5417
-    },
-    "riddle": null
-  },
-  {
-    "city": "Shanghai",
+    "city": "Beijing",
     "country": "China",
     "coordinates": {
-      "lat": 31.2304,
-      "lon": 121.4737
+      "lat": 39.9042,
+      "lon": 116.4074
     },
-    "riddle": null
+    "riddle": "Forbidden City stands in red,\nGreat Wall snakes far ahead.\nTemple of Heaven's azure rise,\nSummer Palace waterside.\nHutongs hide in ancient ways,\nTiananmen's endless days.\nWhere dragons guard imperial dreams,\nAnd history's not what it seems."
   },
   {
-    "city": "São Paulo",
-    "country": "Brazil",
+    "city": "Krakow",
+    "country": "Poland",
     "coordinates": {
-      "lat": -23.5505,
-      "lon": -46.6333
+      "lat": 50.0647,
+      "lon": 19.945
     },
-    "riddle": null
+    "riddle": "Wawel Dragon guards the hill,\nWisła flows serenely still.\nMarket Square's hourly call,\nCloth Hall traders rise and fall.\nKazimierz holds stories dear,\nPlanty's gardens circle near.\nWhere kings once crowned their Polish reign,\nMedieval dreams remain plain."
   },
   {
-    "city": "Johannesburg",
-    "country": "South Africa",
+    "city": "Hamburg",
+    "country": "Germany",
     "coordinates": {
-      "lat": -26.2041,
-      "lon": 28.0473
+      "lat": 53.5511,
+      "lon": 9.9937
     },
-    "riddle": null
-  },
-  {
-    "city": "Kuala Lumpur",
-    "country": "Malaysia",
-    "coordinates": {
-      "lat": 3.139,
-      "lon": 101.6869
-    },
-    "riddle": null
-  },
-  {
-    "city": "Jakarta",
-    "country": "Indonesia",
-    "coordinates": {
-      "lat": -6.2088,
-      "lon": 106.8456
-    },
-    "riddle": null
-  },
-  {
-    "city": "Lima",
-    "country": "Peru",
-    "coordinates": {
-      "lat": -12.0464,
-      "lon": -77.0428
-    },
-    "riddle": null
-  },
-  {
-    "city": "Bogotá",
-    "country": "Colombia",
-    "coordinates": {
-      "lat": 4.711,
-      "lon": -74.0721
-    },
-    "riddle": null
-  },
-  {
-    "city": "Nairobi",
-    "country": "Kenya",
-    "coordinates": {
-      "lat": -1.2921,
-      "lon": 36.8219
-    },
-    "riddle": null
-  },
-  {
-    "city": "Lagos",
-    "country": "Nigeria",
-    "coordinates": {
-      "lat": 6.5244,
-      "lon": 3.3792
-    },
-    "riddle": "In a land where the ocean meets the vibrant shore,\nA city thrives, known for its bustling core.\nFamous for its market, a floating spectacle,\nWhere the spirit of music and film isacle.\nOnce a hub in the trade of old,\nIts name in the language means 'lagoons' untold.\nGuess this city, a giant in its region,\nWhere the energy of life is in constant legion."
-  },
-  {
-    "city": "Casablanca",
-    "country": "Morocco",
-    "coordinates": {
-      "lat": 33.5731,
-      "lon": -7.5898
-    },
-    "riddle": null
-  },
-  {
-    "city": "Hanoi",
-    "country": "Vietnam",
-    "coordinates": {
-      "lat": 21.0285,
-      "lon": 105.8542
-    },
-    "riddle": null
-  },
-  {
-    "city": "Manila",
-    "country": "Philippines",
-    "coordinates": {
-      "lat": 14.5995,
-      "lon": 120.9842
-    },
-    "riddle": null
-  },
-  {
-    "city": "Karachi",
-    "country": "Pakistan",
-    "coordinates": {
-      "lat": 24.8607,
-      "lon": 67.0011
-    },
-    "riddle": null
-  },
-  {
-    "city": "Dhaka",
-    "country": "Bangladesh",
-    "coordinates": {
-      "lat": 23.8103,
-      "lon": 90.4125
-    },
-    "riddle": null
-  },
-  {
-    "city": "Tehran",
-    "country": "Iran",
-    "coordinates": {
-      "lat": 35.6892,
-      "lon": 51.389
-    },
-    "riddle": null
-  },
-  {
-    "city": "Baghdad",
-    "country": "Iraq",
-    "coordinates": {
-      "lat": 33.3152,
-      "lon": 44.3661
-    },
-    "riddle": null
-  },
-  {
-    "city": "Riyadh",
-    "country": "Saudi Arabia",
-    "coordinates": {
-      "lat": 24.7136,
-      "lon": 46.6753
-    },
-    "riddle": null
-  },
-  {
-    "city": "Addis Ababa",
-    "country": "Ethiopia",
-    "coordinates": {
-      "lat": 9.032,
-      "lon": 38.7492
-    },
-    "riddle": null
-  },
-  {
-    "city": "Kinshasa",
-    "country": "DR Congo",
-    "coordinates": {
-      "lat": -4.4419,
-      "lon": 15.2663
-    },
-    "riddle": null
-  },
-  {
-    "city": "Yangon",
-    "country": "Myanmar",
-    "coordinates": {
-      "lat": 16.8661,
-      "lon": 96.1951
-    },
-    "riddle": null
-  },
-  {
-    "city": "Bucharest",
-    "country": "Romania",
-    "coordinates": {
-      "lat": 44.4268,
-      "lon": 26.1025
-    },
-    "riddle": null
-  },
-  {
-    "city": "Budapest",
-    "country": "Hungary",
-    "coordinates": {
-      "lat": 47.4979,
-      "lon": 19.0402
-    },
-    "riddle": null
-  },
-  {
-    "city": "Belgrade",
-    "country": "Serbia",
-    "coordinates": {
-      "lat": 44.7866,
-      "lon": 20.4489
-    },
-    "riddle": null
-  },
-  {
-    "city": "Kiev",
-    "country": "Ukraine",
-    "coordinates": {
-      "lat": 50.4501,
-      "lon": 30.5234
-    },
-    "riddle": null
-  },
-  {
-    "city": "Minsk",
-    "country": "Belarus",
-    "coordinates": {
-      "lat": 53.9006,
-      "lon": 27.559
-    },
-    "riddle": null
-  },
-  {
-    "city": "Riga",
-    "country": "Latvia",
-    "coordinates": {
-      "lat": 56.9496,
-      "lon": 24.1052
-    },
-    "riddle": null
-  },
-  {
-    "city": "Vilnius",
-    "country": "Lithuania",
-    "coordinates": {
-      "lat": 54.6872,
-      "lon": 25.2797
-    },
-    "riddle": null
-  },
-  {
-    "city": "Tallinn",
-    "country": "Estonia",
-    "coordinates": {
-      "lat": 59.437,
-      "lon": 24.7536
-    },
-    "riddle": null
-  },
-  {
-    "city": "Reykjavik",
-    "country": "Iceland",
-    "coordinates": {
-      "lat": 64.1265,
-      "lon": -21.8174
-    },
-    "riddle": null
-  },
-  {
-    "city": "Luxembourg City",
-    "country": "Luxembourg",
-    "coordinates": {
-      "lat": 49.6116,
-      "lon": 6.1319
-    },
-    "riddle": null
+    "riddle": "Elbe's waters feed the port,\nSpeicherstadt's red bricks report.\nRathaus towers guard the square,\nReeperbahn's night without care.\nAlster Lakes reflect the day,\nMichel's spire shows the way.\nWhere Hanseatic trade once flew,\nMaritime dreams still break through."
   }
 ]
