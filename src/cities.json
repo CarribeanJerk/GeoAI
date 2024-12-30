@@ -1,236 +1,587 @@
 [
-    "Tokyo",
-    "New York",
-    "London",
-    "Paris",
-    "Los Angeles",
-    "Shanghai",
-    "Beijing",
-    "Moscow",
-    "Sydney",
-    "Mumbai",
-    "Delhi",
-    "Berlin",
-    "São Paulo",
-    "Cairo",
-    "Mexico City",
-    "Rio de Janeiro",
-    "Hong Kong",
-    "Istanbul",
-    "Singapore",
-    "Buenos Aires",
-    "Seoul",
-    "Lagos",
-    "Rome",
-    "Jakarta",
-    "Kolkata",
-    "Lagos",
-    "Bangkok",
-    "Dhaka",
-    "Karachi",
-    "Chennai",
-    "Cairo",
-    "Manila",
-    "Shenzhen",
-    "Paris",
-    "London",
-    "Toronto",
-    "Chicago",
-    "Lahore",
-    "Nagoya",
-    "Ho Chi Minh City",
-    "Hong Kong",
-    "Madrid",
-    "Melbourne",
-    "Jakarta",
-    "Taipei",
-    "Dubai",
-    "Ahmedabad",
-    "Addis Ababa",
-    "Cairo",
-    "San Francisco",
-    "Kuala Lumpur",
-    "Buenos Aires",
-    "Tianjin",
-    "Chengdu",
-    "Abuja",
-    "Yokohama",
-    "Lima",
-    "Riyadh",
-    "Bangalore",
-    "Copenhagen",
-    "Singapore",
-    "Kiev",
-    "Hong Kong",
-    "Lagos",
-    "Vancouver",
-    "Jinan",
-    "Khartoum",
-    "Warsaw",
-    "Porto Alegre",
-    "Brisbane",
-    "Cape Town",
-    "Athens",
-    "Alexandria",
-    "San Diego",
-    "Phoenix",
-    "Johannesburg",
-    "Portland",
-    "Buenos Aires",
-    "Seattle",
-    "Osaka",
-    "Abidjan",
-    "Seoul",
-    "Shenzhen",
-    "Surat",
-    "Lahore",
-    "Dallas",
-    "Milan",
-    "Bogotá",
-    "Pune",
-    "Addis Ababa",
-    "Wuhan",
-    "Ho Chi Minh City",
-    "Stockholm",
-    "Munich",
-    "Nairobi",
-    "Santiago",
-    "Madrid",
-    "Baghdad",
-    "Las Vegas",
-    "Montreal",
-    "Minsk",
-    "Kolkata",
-    "Dhaka",
-    "Lahore",
-    "Tunis",
-    "Algiers",
-    "Phoenix",
-    "Hangzhou",
-    "Shanghai",
-    "Cape Town",
-    "Hanoi",
-    "Pune",
-    "Santiago",
-    "Tbilisi",
-    "Belo Horizonte",
-    "Lagos",
-    "Dubai",
-    "Bucharest",
-    "Hong Kong",
-    "Tashkent",
-    "Almaty",
-    "Khartoum",
-    "Bandung",
-    "Manila",
-    "Auckland",
-    "Quito",
-    "Lagos",
-    "Tehran",
-    "Dallas",
-    "Denver",
-    "Baku",
-    "Zagreb",
-    "Abuja",
-    "Mexico City",
-    "Tirana",
-    "Osaka",
-    "Lagos",
-    "Düsseldorf",
-    "Munich",
-    "Dalian",
-    "Helsinki",
-    "Rome",
-    "Mumbai",
-    "Cebu",
-    "Lagos",
-    "Helsinki",
-    "Hanoi",
-    "Vienna",
-    "Kolkata",
-    "Brisbane",
-    "Los Angeles",
-    "Berlin",
-    "Vancouver",
-    "Madrid",
-    "Lagos",
-    "Dhaka",
-    "Chicago",
-    "Istanbul",
-    "Lagos",
-    "Toronto",
-    "Phoenix",
-    "Sydney",
-    "Mexico City",
-    "Paris",
-    "San Francisco",
-    "Jakarta",
-    "Mumbai",
-    "Jakarta",
-    "Seoul",
-    "Moscow",
-    "Pune",
-    "Mumbai",
-    "Manila",
-    "Cairo",
-    "Tehran",
-    "Rome",
-    "Lagos",
-    "Tashkent",
-    "London",
-    "Singapore",
-    "Barcelona",
-    "Abuja",
-    "Karachi",
-    "Lahore",
-    "Shanghai",
-    "Sydney",
-    "Paris",
-    "Lagos",
-    "Ho Chi Minh City",
-    "Buenos Aires",
-    "Taipei",
-    "Manila",
-    "Los Angeles",
-    "Bengaluru",
-    "Kuala Lumpur",
-    "Johannesburg",
-    "Delhi",
-    "Milan",
-    "Düsseldorf",
-    "Tunis",
-    "New York",
-    "Cape Town",
-    "Amman",
-    "Medellín",
-    "Lagos",
-    "Chennai",
-    "Bangalore",
-    "Berlin",
-    "Chongqing",
-    "Santiago",
-    "Toronto",
-    "Dubai",
-    "Seoul",
-    "Paris",
-    "Hong Kong",
-    "Jakarta",
-    "Nairobi",
-    "Dubai",
-    "Bangkok",
-    "Cairo",
-    "Los Angeles",
-    "Sao Paulo",
-    "Lagos",
-    "Manchester",
-    "Melbourne",
-    "Madrid",
-    "Stockholm",
-    "Delhi",
-    "San Diego",
-    "Baghdad",
-    "San Juan",
-    "Shanghai",
-    "Abuja"
-  ]
-  
+  {
+    "city": "New York",
+    "country": "USA",
+    "coordinates": {
+      "lat": 40.7128,
+      "lon": -74.006
+    },
+    "riddle": null
+  },
+  {
+    "city": "London",
+    "country": "UK",
+    "coordinates": {
+      "lat": 51.5074,
+      "lon": -0.1278
+    },
+    "riddle": null
+  },
+  {
+    "city": "Tokyo",
+    "country": "Japan",
+    "coordinates": {
+      "lat": 35.6895,
+      "lon": 139.6917
+    },
+    "riddle": null
+  },
+  {
+    "city": "Paris",
+    "country": "France",
+    "coordinates": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "riddle": null
+  },
+  {
+    "city": "Los Angeles",
+    "country": "USA",
+    "coordinates": {
+      "lat": 34.0522,
+      "lon": -118.2437
+    },
+    "riddle": null
+  },
+  {
+    "city": "Mumbai",
+    "country": "India",
+    "coordinates": {
+      "lat": 19.076,
+      "lon": 72.8777
+    },
+    "riddle": null
+  },
+  {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "coordinates": {
+      "lat": -22.9068,
+      "lon": -43.1729
+    },
+    "riddle": null
+  },
+  {
+    "city": "Cairo",
+    "country": "Egypt",
+    "coordinates": {
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    "riddle": null
+  },
+  {
+    "city": "Moscow",
+    "country": "Russia",
+    "coordinates": {
+      "lat": 55.7558,
+      "lon": 37.6173
+    },
+    "riddle": "In a land of frost and fire, I stand tall,\nMy heart beats with the rhythm of a thousand bells.\nRivers of red weave through my sprawling halls,\nWhere once a mighty wall told tales of citadels.\nDance of the flames marks my longest night,\nAnd my name echoes in a famous play's fight.\nSeek me where the bear and the eagle take flight,\nIn the embrace of the cold, I am the light."
+  },
+  {
+    "city": "Berlin",
+    "country": "Germany",
+    "coordinates": {
+      "lat": 52.52,
+      "lon": 13.405
+    },
+    "riddle": null
+  },
+  {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "coordinates": {
+      "lat": 19.4326,
+      "lon": -99.1332
+    },
+    "riddle": null
+  },
+  {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "coordinates": {
+      "lat": -33.9249,
+      "lon": 18.4241
+    },
+    "riddle": null
+  },
+  {
+    "city": "Singapore",
+    "country": "Singapore",
+    "coordinates": {
+      "lat": 1.3521,
+      "lon": 103.8198
+    },
+    "riddle": null
+  },
+  {
+    "city": "Toronto",
+    "country": "Canada",
+    "coordinates": {
+      "lat": 43.6532,
+      "lon": -79.3832
+    },
+    "riddle": null
+  },
+  {
+    "city": "Istanbul",
+    "country": "Turkey",
+    "coordinates": {
+      "lat": 41.0082,
+      "lon": 28.9784
+    },
+    "riddle": null
+  },
+  {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "coordinates": {
+      "lat": 13.7563,
+      "lon": 100.5018
+    },
+    "riddle": null
+  },
+  {
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "coordinates": {
+      "lat": 52.3676,
+      "lon": 4.9041
+    },
+    "riddle": null
+  },
+  {
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "coordinates": {
+      "lat": -34.6037,
+      "lon": -58.3816
+    },
+    "riddle": null
+  },
+  {
+    "city": "Seoul",
+    "country": "South Korea",
+    "coordinates": {
+      "lat": 37.5665,
+      "lon": 126.978
+    },
+    "riddle": null
+  },
+  {
+    "city": "Vienna",
+    "country": "Austria",
+    "coordinates": {
+      "lat": 48.2082,
+      "lon": 16.3738
+    },
+    "riddle": null
+  },
+  {
+    "city": "Dubai",
+    "country": "UAE",
+    "coordinates": {
+      "lat": 25.2048,
+      "lon": 55.2708
+    },
+    "riddle": null
+  },
+  {
+    "city": "Stockholm",
+    "country": "Sweden",
+    "coordinates": {
+      "lat": 59.3293,
+      "lon": 18.0686
+    },
+    "riddle": null
+  },
+  {
+    "city": "Athens",
+    "country": "Greece",
+    "coordinates": {
+      "lat": 37.9838,
+      "lon": 23.7275
+    },
+    "riddle": null
+  },
+  {
+    "city": "Prague",
+    "country": "Czech Republic",
+    "coordinates": {
+      "lat": 50.0755,
+      "lon": 14.4378
+    },
+    "riddle": null
+  },
+  {
+    "city": "Vancouver",
+    "country": "Canada",
+    "coordinates": {
+      "lat": 49.2827,
+      "lon": -123.1207
+    },
+    "riddle": null
+  },
+  {
+    "city": "Lisbon",
+    "country": "Portugal",
+    "coordinates": {
+      "lat": 38.7223,
+      "lon": -9.1393
+    },
+    "riddle": null
+  },
+  {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "coordinates": {
+      "lat": 55.6761,
+      "lon": 12.5683
+    },
+    "riddle": null
+  },
+  {
+    "city": "Dublin",
+    "country": "Ireland",
+    "coordinates": {
+      "lat": 53.3498,
+      "lon": -6.2603
+    },
+    "riddle": null
+  },
+  {
+    "city": "Helsinki",
+    "country": "Finland",
+    "coordinates": {
+      "lat": 60.1699,
+      "lon": 24.9384
+    },
+    "riddle": null
+  },
+  {
+    "city": "Oslo",
+    "country": "Norway",
+    "coordinates": {
+      "lat": 59.9139,
+      "lon": 10.7522
+    },
+    "riddle": null
+  },
+  {
+    "city": "Warsaw",
+    "country": "Poland",
+    "coordinates": {
+      "lat": 52.2297,
+      "lon": 21.0122
+    },
+    "riddle": null
+  },
+  {
+    "city": "Brussels",
+    "country": "Belgium",
+    "coordinates": {
+      "lat": 50.8503,
+      "lon": 4.3517
+    },
+    "riddle": null
+  },
+  {
+    "city": "Madrid",
+    "country": "Spain",
+    "coordinates": {
+      "lat": 40.4168,
+      "lon": -3.7038
+    },
+    "riddle": null
+  },
+  {
+    "city": "Rome",
+    "country": "Italy",
+    "coordinates": {
+      "lat": 41.9028,
+      "lon": 12.4964
+    },
+    "riddle": null
+  },
+  {
+    "city": "Zurich",
+    "country": "Switzerland",
+    "coordinates": {
+      "lat": 47.3769,
+      "lon": 8.5417
+    },
+    "riddle": null
+  },
+  {
+    "city": "Shanghai",
+    "country": "China",
+    "coordinates": {
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    "riddle": null
+  },
+  {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "coordinates": {
+      "lat": -23.5505,
+      "lon": -46.6333
+    },
+    "riddle": null
+  },
+  {
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "coordinates": {
+      "lat": -26.2041,
+      "lon": 28.0473
+    },
+    "riddle": null
+  },
+  {
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "coordinates": {
+      "lat": 3.139,
+      "lon": 101.6869
+    },
+    "riddle": null
+  },
+  {
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "coordinates": {
+      "lat": -6.2088,
+      "lon": 106.8456
+    },
+    "riddle": null
+  },
+  {
+    "city": "Lima",
+    "country": "Peru",
+    "coordinates": {
+      "lat": -12.0464,
+      "lon": -77.0428
+    },
+    "riddle": null
+  },
+  {
+    "city": "Bogotá",
+    "country": "Colombia",
+    "coordinates": {
+      "lat": 4.711,
+      "lon": -74.0721
+    },
+    "riddle": null
+  },
+  {
+    "city": "Nairobi",
+    "country": "Kenya",
+    "coordinates": {
+      "lat": -1.2921,
+      "lon": 36.8219
+    },
+    "riddle": null
+  },
+  {
+    "city": "Lagos",
+    "country": "Nigeria",
+    "coordinates": {
+      "lat": 6.5244,
+      "lon": 3.3792
+    },
+    "riddle": "In a land where the ocean meets the vibrant shore,\nA city thrives, known for its bustling core.\nFamous for its market, a floating spectacle,\nWhere the spirit of music and film isacle.\nOnce a hub in the trade of old,\nIts name in the language means 'lagoons' untold.\nGuess this city, a giant in its region,\nWhere the energy of life is in constant legion."
+  },
+  {
+    "city": "Casablanca",
+    "country": "Morocco",
+    "coordinates": {
+      "lat": 33.5731,
+      "lon": -7.5898
+    },
+    "riddle": null
+  },
+  {
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "coordinates": {
+      "lat": 21.0285,
+      "lon": 105.8542
+    },
+    "riddle": null
+  },
+  {
+    "city": "Manila",
+    "country": "Philippines",
+    "coordinates": {
+      "lat": 14.5995,
+      "lon": 120.9842
+    },
+    "riddle": null
+  },
+  {
+    "city": "Karachi",
+    "country": "Pakistan",
+    "coordinates": {
+      "lat": 24.8607,
+      "lon": 67.0011
+    },
+    "riddle": null
+  },
+  {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "coordinates": {
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    "riddle": null
+  },
+  {
+    "city": "Tehran",
+    "country": "Iran",
+    "coordinates": {
+      "lat": 35.6892,
+      "lon": 51.389
+    },
+    "riddle": null
+  },
+  {
+    "city": "Baghdad",
+    "country": "Iraq",
+    "coordinates": {
+      "lat": 33.3152,
+      "lon": 44.3661
+    },
+    "riddle": null
+  },
+  {
+    "city": "Riyadh",
+    "country": "Saudi Arabia",
+    "coordinates": {
+      "lat": 24.7136,
+      "lon": 46.6753
+    },
+    "riddle": null
+  },
+  {
+    "city": "Addis Ababa",
+    "country": "Ethiopia",
+    "coordinates": {
+      "lat": 9.032,
+      "lon": 38.7492
+    },
+    "riddle": null
+  },
+  {
+    "city": "Kinshasa",
+    "country": "DR Congo",
+    "coordinates": {
+      "lat": -4.4419,
+      "lon": 15.2663
+    },
+    "riddle": null
+  },
+  {
+    "city": "Yangon",
+    "country": "Myanmar",
+    "coordinates": {
+      "lat": 16.8661,
+      "lon": 96.1951
+    },
+    "riddle": null
+  },
+  {
+    "city": "Bucharest",
+    "country": "Romania",
+    "coordinates": {
+      "lat": 44.4268,
+      "lon": 26.1025
+    },
+    "riddle": null
+  },
+  {
+    "city": "Budapest",
+    "country": "Hungary",
+    "coordinates": {
+      "lat": 47.4979,
+      "lon": 19.0402
+    },
+    "riddle": null
+  },
+  {
+    "city": "Belgrade",
+    "country": "Serbia",
+    "coordinates": {
+      "lat": 44.7866,
+      "lon": 20.4489
+    },
+    "riddle": null
+  },
+  {
+    "city": "Kiev",
+    "country": "Ukraine",
+    "coordinates": {
+      "lat": 50.4501,
+      "lon": 30.5234
+    },
+    "riddle": null
+  },
+  {
+    "city": "Minsk",
+    "country": "Belarus",
+    "coordinates": {
+      "lat": 53.9006,
+      "lon": 27.559
+    },
+    "riddle": null
+  },
+  {
+    "city": "Riga",
+    "country": "Latvia",
+    "coordinates": {
+      "lat": 56.9496,
+      "lon": 24.1052
+    },
+    "riddle": null
+  },
+  {
+    "city": "Vilnius",
+    "country": "Lithuania",
+    "coordinates": {
+      "lat": 54.6872,
+      "lon": 25.2797
+    },
+    "riddle": null
+  },
+  {
+    "city": "Tallinn",
+    "country": "Estonia",
+    "coordinates": {
+      "lat": 59.437,
+      "lon": 24.7536
+    },
+    "riddle": null
+  },
+  {
+    "city": "Reykjavik",
+    "country": "Iceland",
+    "coordinates": {
+      "lat": 64.1265,
+      "lon": -21.8174
+    },
+    "riddle": null
+  },
+  {
+    "city": "Luxembourg City",
+    "country": "Luxembourg",
+    "coordinates": {
+      "lat": 49.6116,
+      "lon": 6.1319
+    },
+    "riddle": null
+  }
+]

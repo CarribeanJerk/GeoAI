@@ -16,6 +16,7 @@ export default {
         messageBounce: 'bounce 1s cubic-bezier(0.36, 0, 0.66, -0.56)',
         slideInLeft: 'slideInLeft 0.5s ease-out forwards',
         typing: 'typing 4s steps(40, end) forwards',
+        slowFadeIn: 'slowFadeIn 2s ease-in forwards',
       },
       keyframes: {
         fadeIn: {
@@ -95,6 +96,10 @@ export default {
             width: '100%',
             opacity: '1'
           }
+        },
+        slowFadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
         }
       },
     },

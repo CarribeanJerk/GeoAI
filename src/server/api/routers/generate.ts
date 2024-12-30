@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { env } from "~/env";
+import { getRiddle, saveRiddle } from '~/utils/riddleStorage';
 
 interface XAIResponse {
   choices: Array<{ message: { content: string } }>;
@@ -9,9 +10,23 @@ interface XAIResponse {
 
 export const generateRouter = createTRPCRouter({
   generateRiddle: publicProcedure
-    .input(z.object({ city: z.string() }))
+    .input(z.object({ 
+      city: z.string(),
+      coordinates: z.tuple([z.number(), z.number()]) 
+    }))
     .mutation(async ({ input }) => {
       try {
+        // Check for existing riddle
+        const existingRiddle = getRiddle(input.city);
+        if (existingRiddle) {
+          return {
+            success: true,
+            result: existingRiddle,
+            coordinates: input.coordinates
+          };
+        }
+
+        // If no existing riddle, generate new one
         console.log('Attempting API call with city:', input.city);
         
         const response = await fetch('https://api.x.ai/v1/chat/completions', {
@@ -48,9 +63,15 @@ export const generateRouter = createTRPCRouter({
           throw new Error('Invalid response format');
         }
 
+        const newRiddle = data.choices[0].message.content;
+        
+        // Save the new riddle
+        await saveRiddle(input.city, newRiddle);
+
         return {
           success: true,
-          result: data.choices[0].message.content,
+          result: newRiddle,
+          coordinates: input.coordinates
         };
 
       } catch (error) {

@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import cities from '../cities.json'
 import { api } from "~/trpc/react";
 import { Space_Grotesk } from "next/font/google";
+import { calculateScore } from "~/utils/distance";
+import GuessMap from "~/components/GuessMap";
 
 interface GuessState {
   isReady: boolean;
@@ -27,12 +29,17 @@ export default function Home() {
   const [initialRender, setInitialRender] = useState(true);
   const [showWelcome, setShowWelcome] = useState(true);
   const [hasActiveRiddle, setHasActiveRiddle] = useState(false);
+  const [showGlowTitle, setShowGlowTitle] = useState(false);
+  const [showMap, setShowMap] = useState(false);
+  const [cityCoords, setCityCoords] = useState<[number, number] | null>(null);
+  const [score, setScore] = useState<number | null>(null);
+  const [isFirstPlay, setIsFirstPlay] = useState(true);
 
   const generateRiddle = api.generate.generateRiddle.useMutation({
     onSuccess: (data) => {
       if (data.success && data.result) {
         setRiddle(data.result);
-        setGuessState({ isReady: true, message: "Click anywhere on the Earth to make your guess!" });
+        setCityCoords(data.coordinates);
       }
       setIsLoading(false);
     },
@@ -55,19 +62,20 @@ export default function Home() {
     }
 
     setShowWelcome(false);
+    setShowGlowTitle(false);
+    setScore(null);
     
-    // Only allow new riddle if there isn't an active one
     if (!isMinimized && !hasActiveRiddle) {
       setIsMinimized(true);
       setIsLoading(true);
       const randomCity = cities[Math.floor(Math.random() * cities.length)];
       if (randomCity) {
         setHasActiveRiddle(true);
-        generateRiddle.mutate({ city: randomCity });
+        generateRiddle.mutate({
+          city: randomCity.city,
+          coordinates: [randomCity.coordinates.lon, randomCity.coordinates.lat] as [number, number]
+        });
       }
-    } else if (isMinimized && hasActiveRiddle) {
-      // Allow toggling back to center when there's an active riddle
-      setIsMinimized(false);
     }
   };
 
@@ -77,6 +85,24 @@ export default function Home() {
       setInitialRender(true);
     }
   }, [guessState.isReady]);
+
+  // Start fade-in after welcome text animation
+  useEffect(() => {
+    setTimeout(() => setShowGlowTitle(true), 4000); // 4s = welcome text duration
+  }, []);
+
+  const handleGuessSubmit = (guessCoords: [number, number]) => {
+    if (!cityCoords) return;
+    
+    setRiddle(''); // Clear riddle
+    const score = calculateScore(guessCoords, cityCoords);
+    setScore(score);
+    setHasActiveRiddle(false);
+    setShowMap(false);
+    setIsMinimized(false); // Return Earth to center
+    setShowGlowTitle(true); // Show play again text
+    setIsFirstPlay(false); // Track subsequent plays
+  };
 
   return (
     <main className="min-h-[100vh] w-[100vw] overflow-hidden bg-gradient-to-b from-[#0d0716] to-[#6468ab] flex items-center justify-center fixed inset-0">
@@ -128,7 +154,16 @@ export default function Home() {
             ${isShaking ? 'animate-shake' : ''}`}
           onClick={handlePlanetClick}
         >
-          <div className="opacity-100 scale-[0.4] sm:scale-[0.6] md:scale-[0.95]">
+          <div className="opacity-100 scale-[0.4] sm:scale-[0.6] md:scale-[0.95] relative">
+            {showGlowTitle && !hasActiveRiddle && (
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10
+                text-center">
+                <p className={`${spaceGrotesk.className} text-white text-lg sm:text-xl md:text-2xl font-bold
+                  tracking-widest drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]`}>
+                  {isFirstPlay ? 'CLICK TO START' : 'PLAY AGAIN'}
+                </p>
+              </div>
+            )}
             <div className="relative w-[600px] h-[600px] rounded-full animate-[spin_25s_linear_infinite] shadow-[inset_-30px_-30px_80px_rgba(0,0,0,0.5),-2px_-2px_15px_rgba(255,255,255,0.1)]"
               style={{
                 background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cpath fill='%23157A3B' d='M20,60 Q60,20 120,40 T220,20 T320,45 Q350,70 320,100 Q290,120 250,105 T160,120 T80,100 Q30,90 20,60 Q40,80 80,70 T160,80 T220,60 T180,40 Q140,50 100,40 T20,60 Z' /%3E%3Cpath fill='%23157A3B' d='M420,30 Q470,0 540,20 T680,10 T760,35 Q780,60 760,90 Q720,110 680,95 T580,110 T480,90 Q440,70 420,30 Q450,50 500,40 T600,50 T680,30 T640,20 Q600,30 550,20 T420,30 Z' /%3E%3Cpath fill='%23157A3B' d='M140,180 Q180,150 240,165 T340,150 T420,170 Q460,190 420,220 Q390,240 340,225 T240,240 T160,220 Q130,200 140,180 Q160,195 200,185 T280,195 T340,175 T300,165 Q260,175 210,165 T140,180 Z' /%3E%3Cpath fill='%231E4D2B' d='M520,160 Q570,140 620,155 T720,140 Q760,160 720,190 Q690,210 640,195 T550,210 Q510,190 520,160 Q540,175 580,165 T660,175 T700,155 T660,145 Q620,155 580,145 T520,160 Z' /%3E%3Cpath fill='%23157A3B' d='M60,280 Q100,250 160,265 T260,250 T340,270 Q370,290 340,320 Q310,340 260,325 T160,340 T80,320 Q50,300 60,280 Q80,295 120,285 T200,295 T260,275 T220,265 Q180,275 130,265 T60,280 Z' /%3E%3Cpath fill='%23157A3B' d='M480,260 Q530,230 590,245 T690,230 T770,250 Q800,270 770,300 Q740,320 690,305 T590,320 T510,300 Q480,280 480,260 Q500,275 540,265 T620,275 T690,255 T650,245 Q610,255 560,245 T480,260 Z' /%3E%3C/svg%3E"), linear-gradient(30deg, #1B4B90 0%, #2B7CD3 100%)`
@@ -172,6 +207,34 @@ export default function Home() {
         <div className="fixed bottom-4 left-4 bg-white/10 backdrop-blur-md p-4 rounded-lg shadow-lg 
           w-[calc(100vw-2rem)] sm:w-[90vw] md:w-auto md:max-w-md animate-slideUp">
           <p className="text-white/90 mb-2 text-xs sm:text-sm md:text-base">{guessState.message}</p>
+        </div>
+      )}
+
+      {hasActiveRiddle && showMap && (
+        <div className="fixed left-4 bottom-4 w-[calc(100vw-2rem)] h-[60vh] 
+          md:w-[500px] md:h-[400px] bg-white/10 backdrop-blur-md rounded-lg 
+          shadow-lg overflow-hidden animate-slideUp">
+          <GuessMap onGuessSubmit={handleGuessSubmit} />
+        </div>
+      )}
+
+      {hasActiveRiddle && !showMap && (
+        <button
+          onClick={() => setShowMap(true)}
+          className="fixed left-4 bottom-4 bg-white/10 backdrop-blur-md px-6 py-4 
+            rounded-lg shadow-lg text-white/90 hover:bg-white/20 transition-colors
+            animate-slideUp text-lg md:text-xl font-semibold w-64"
+        >
+          Make Your Guess
+        </button>
+      )}
+
+      {score !== null && (
+        <div className="fixed top-16 left-4 bg-white/10 backdrop-blur-md p-6 
+          rounded-lg shadow-lg animate-fadeIn">
+          <p className="text-white/90 text-xl md:text-2xl font-bold">
+            Your score: {score} points
+          </p>
         </div>
       )}
     </main>
