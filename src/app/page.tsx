@@ -199,9 +199,9 @@ export default function Home() {
       )}
 
       {hasActiveRiddle && showMap && (
-        <div className="fixed left-4 bottom-4 w-[calc(100vw-2rem)] h-[60vh] 
-          md:w-[500px] md:h-[400px] bg-white/10 backdrop-blur-md rounded-lg 
-          shadow-lg overflow-hidden animate-slideUp">
+        <div className="fixed left-4 bottom-4 w-[calc(100vw-2rem)] h-[42vh] 
+          md:w-[500px] md:h-[50vh] bg-white/10 backdrop-blur-md rounded-lg 
+          shadow-lg overflow-hidden animate-slideUp mt-14">
           <GuessMap onGuessSubmit={handleGuessSubmit} />
         </div>
       )}

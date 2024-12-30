@@ -84,7 +84,7 @@ export default function GuessMap({ onGuessSubmit }: GuessMapProps) {
 
   return (
     <div className="relative w-full h-full">
-      <div ref={mapContainer} className="w-full h-full" />
+      <div ref={mapContainer} className="w-full h-full [&_.mapboxgl-ctrl-logo]:hidden [&_.mapboxgl-ctrl-bottom-right]:hidden" />
       {guessCoords && (
         <button
           onClick={() => onGuessSubmit(guessCoords)}
