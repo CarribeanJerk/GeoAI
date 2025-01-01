@@ -1,1 +1,1 @@
-building
+ChatGPT wrapper spinoff of geoguessr
