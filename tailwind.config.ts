@@ -70,12 +70,8 @@ export default {
           '90%': { transform: 'translateY(0)' }
         },
         slideInLeft: {
-          '0%': { 
-            transform: 'translateX(-100%)' 
-          },
-          '100%': { 
-            transform: 'translateX(0)' 
-          }
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         typing: {
           '0%': { 

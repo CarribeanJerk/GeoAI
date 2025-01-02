@@ -33,6 +33,7 @@ export default function Home() {
   const [cityCoords, setCityCoords] = useState<[number, number] | null>(null);
   const [score, setScore] = useState<number | null>(null);
   const [isFirstPlay, setIsFirstPlay] = useState(true);
+  const [cityName, setCityName] = useState<string | null>(null);
 
   const handlePlanetClick = async () => {
     if (!user.isSignedIn) {
@@ -62,6 +63,7 @@ export default function Home() {
         setHasActiveRiddle(true);
         setRiddle(randomCity.riddle);
         setCityCoords([randomCity.coordinates.lon, randomCity.coordinates.lat]);
+        setCityName(randomCity.city);
         setIsLoading(false);
       }
     }
@@ -219,9 +221,12 @@ export default function Home() {
 
       {score !== null && (
         <div className="fixed top-16 left-4 bg-white/10 backdrop-blur-md p-6 
-          rounded-lg shadow-lg animate-fadeIn">
-          <p className="text-white/90 text-xl md:text-2xl font-bold">
+          rounded-lg shadow-lg w-[calc(100vw-2rem)] sm:w-auto md:max-w-md">
+          <p className="text-white/90 text-xl md:text-2xl font-bold mb-2 animate-fadeIn">
             Your score: {score} points
+          </p>
+          <p className="text-white/90 text-sm md:text-base animate-slideInLeft">
+            The correct answer was: <span className="font-semibold">{cityName}</span>
           </p>
         </div>
       )}
